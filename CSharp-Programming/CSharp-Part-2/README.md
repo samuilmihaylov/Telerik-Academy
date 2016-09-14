@@ -19,7 +19,7 @@ Collections, arrays, lists
 ##### [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="15"> Homeworks](https://github.com/samuilmihaylov/Telerik-Academy/tree/master/CSharp-Programming/CSharp-Part-2/Homeworks/01.%20Arrays-Homework)
 
 
-### [02. Multidimensional Arrays](https://github.com/samuilmihaylov/Telerik-Academy/tree/master/CSharp-Programming/CSharp-Part-2/Topics/02.%20Multidimensional-Arrays)
+### [02. Multidimensional Arrays](/Topics/02. Multidimensional-Arrays)
 
 Matrices, jagged arrays and multidimensional arrays
 
