@@ -8,50 +8,50 @@ The training is practice-oriented and involves solving hundreds of problems, whi
 
 ## Course program
 
-### [00. Course Introduction](https://github.com/samuilmihaylov/Telerik-Academy-2016-2017/tree/master/CSharp-Programming/CSharp-Part-1/Topics/00.%20Course-Intro)
+### [00. Course Introduction](https://github.com/samuilmihaylov/Telerik-Academy/tree/master/CSharp-Programming/CSharp-Part-1/Topics/00.%20Course-Intro)
 
 Course Program, Examination, Trainers
 
-### [01. Introduction to Programming](https://github.com/samuilmihaylov/Telerik-Academy-2016-2017/tree/master/CSharp-Programming/CSharp-Part-1/Topics/01.%20Introduction-to-Programming)
+### [01. Introduction to Programming](https://github.com/samuilmihaylov/Telerik-Academy/tree/master/CSharp-Programming/CSharp-Part-1/Topics/01.%20Introduction-to-Programming)
 
 IDEs, Programming languages, compilation, C# and .NET
 
-##### [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="15"> Homeworks](https://github.com/samuilmihaylov/Telerik-Academy-2016-2017/tree/master/CSharp-Programming/CSharp-Part-1/Homeworks/01.%20Intro-Programming-Homework)
+##### [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="15"> Homeworks](https://github.com/samuilmihaylov/Telerik-Academy/tree/master/CSharp-Programming/CSharp-Part-1/Homeworks/01.%20Intro-Programming-Homework)
 
 
-### [02. Data Types and Variables](https://github.com/samuilmihaylov/Telerik-Academy-2016-2017/tree/master/CSharp-Programming/CSharp-Part-1/Topics/02.%20Data-Types-and-Variables)
+### [02. Data Types and Variables](https://github.com/samuilmihaylov/Telerik-Academy/tree/master/CSharp-Programming/CSharp-Part-1/Topics/02.%20Data-Types-and-Variables)
 
 Primitive data types (`int`, `short`, `byte`, `long`, `bool`, `string`, `char`), creating and using variables
 
-##### [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="15"> Homeworks](https://github.com/samuilmihaylov/Telerik-Academy-2016-2017/tree/master/CSharp-Programming/CSharp-Part-1/Homeworks/02.%20Data-Types-and-Variables-Homework)
+##### [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="15"> Homeworks](https://github.com/samuilmihaylov/Telerik-Academy/tree/master/CSharp-Programming/CSharp-Part-1/Homeworks/02.%20Data-Types-and-Variables-Homework)
 
 
-### [03. Operators and Expressions](https://github.com/samuilmihaylov/Telerik-Academy-2016-2017/tree/master/CSharp-Programming/CSharp-Part-1/Topics/03.%20Operators-and-Expressions)
+### [03. Operators and Expressions](https://github.com/samuilmihaylov/Telerik-Academy/tree/master/CSharp-Programming/CSharp-Part-1/Topics/03.%20Operators-and-Expressions)
 
 Logical, Arithmetic and Bitwise operators, expressions
 
-##### [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="15"> Homeworks](https://github.com/samuilmihaylov/Telerik-Academy-2016-2017/tree/master/CSharp-Programming/CSharp-Part-1/Homeworks/03.%20Operators-and-Expressions-Homework)
+##### [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="15"> Homeworks](https://github.com/samuilmihaylov/Telerik-Academy/tree/master/CSharp-Programming/CSharp-Part-1/Homeworks/03.%20Operators-and-Expressions-Homework)
 
 
-### [04. Console IO](https://github.com/samuilmihaylov/Telerik-Academy-2016-2017/tree/master/CSharp-Programming/CSharp-Part-1/Topics/04.%20Console-In-and-Out)
+### [04. Console IO](https://github.com/samuilmihaylov/Telerik-Academy/tree/master/CSharp-Programming/CSharp-Part-1/Topics/04.%20Console-In-and-Out)
 
 Using the `Console` object, reading from the console (strings, numbers), printing to the console with formats
 
-##### [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="15"> Homeworks](https://github.com/samuilmihaylov/Telerik-Academy-2016-2017/tree/master/CSharp-Programming/CSharp-Part-1/Homeworks/04.%20Console-In-and-Out-Homework)
+##### [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="15"> Homeworks](https://github.com/samuilmihaylov/Telerik-Academy/tree/master/CSharp-Programming/CSharp-Part-1/Homeworks/04.%20Console-In-and-Out-Homework)
 
 
-### [05. Conditional Statements](https://github.com/samuilmihaylov/Telerik-Academy-2016-2017/tree/master/CSharp-Programming/CSharp-Part-1/Topics/05.%20Conditional-Statements)
+### [05. Conditional Statements](https://github.com/samuilmihaylov/Telerik-Academy/tree/master/CSharp-Programming/CSharp-Part-1/Topics/05.%20Conditional-Statements)
 
 `if-else` constructs, `switch-case`
 
-##### [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="15"> Homeworks](https://github.com/samuilmihaylov/Telerik-Academy-2016-2017/tree/master/CSharp-Programming/CSharp-Part-1/Homeworks/05.%20Conditional-Statements-Homework)
+##### [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="15"> Homeworks](https://github.com/samuilmihaylov/Telerik-Academy/tree/master/CSharp-Programming/CSharp-Part-1/Homeworks/05.%20Conditional-Statements-Homework)
 
 
-### [06. Loops](https://github.com/samuilmihaylov/Telerik-Academy-2016-2017/tree/master/CSharp-Programming/CSharp-Part-1/Topics/06.%20Loops)
+### [06. Loops](https://github.com/samuilmihaylov/Telerik-Academy/tree/master/CSharp-Programming/CSharp-Part-1/Topics/06.%20Loops)
 
 What is a loop? `for`, `while`, `do-while` and `foreach` loops, nested loops
 
-##### [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="15"> Homeworks](https://github.com/samuilmihaylov/Telerik-Academy-2016-2017/tree/master/CSharp-Programming/CSharp-Part-1/Homeworks/06.%20Loops-Homework)
+##### [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="15"> Homeworks](https://github.com/samuilmihaylov/Telerik-Academy/tree/master/CSharp-Programming/CSharp-Part-1/Homeworks/06.%20Loops-Homework)
 
 
 
