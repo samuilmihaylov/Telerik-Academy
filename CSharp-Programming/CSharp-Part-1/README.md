@@ -12,6 +12,7 @@ The training is practice-oriented and involves solving hundreds of problems, whi
 
 Course Program, Examination, Trainers
 
+
 ### [01. Introduction to Programming](https://github.com/samuilmihaylov/Telerik-Academy/tree/master/CSharp-Programming/CSharp-Part-1/Topics/01.%20Introduction-to-Programming)
 
 IDEs, Programming languages, compilation, C# and .NET
