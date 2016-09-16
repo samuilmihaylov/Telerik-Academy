@@ -43,12 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Battery.cs" />
-    <Compile Include="BatteryType.cs" />
-    <Compile Include="Call.cs" />
-    <Compile Include="Display.cs" />
-    <Compile Include="GSM.cs" />
-    <Compile Include="GSMCallHistoryTest.cs" />
+    <Compile Include="Models\Battery.cs" />
+    <Compile Include="Enumerations\BatteryType.cs" />
+    <Compile Include="Models\Call.cs" />
+    <Compile Include="Models\Display.cs" />
+    <Compile Include="Models\GSM.cs" />
+    <Compile Include="Models\GSMCallHistoryTest.cs" />
     <Compile Include="GSMTest.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobilePhoneDevice", "Startup\MobilePhoneDevice.csproj", "{82021671-C708-45D2-8E8F-D4DCA3C03C56}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobilePhoneDevice", "MobilePhoneDevice.csproj", "{82021671-C708-45D2-8E8F-D4DCA3C03C56}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
