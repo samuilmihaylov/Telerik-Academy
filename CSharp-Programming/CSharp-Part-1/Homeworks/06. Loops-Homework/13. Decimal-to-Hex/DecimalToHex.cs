@@ -1,28 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _13.Decimal_to_Hex
+﻿namespace _13.Decimal_to_Hex
 {
+    using System;
+
     class DecimalToHex
     {
         static void Main(string[] args)
         {
-            long decNum = long.Parse(Console.ReadLine());
+            long deciamlInputNumber = long.Parse(Console.ReadLine());
 
-            if (decNum == 0)
+            if (deciamlInputNumber == 0)
             {
                 Console.WriteLine(0);
             }
             else
             {
-                string hexNum = "";
+                string hexadecimalNumberAsString = "";
 
-                while (decNum > 0)
+                while (deciamlInputNumber > 0)
                 {
-                    long checkRemainder = decNum % 16;
+                    long checkRemainder = deciamlInputNumber % 16;
                     string remainder = "";
 
                     switch (checkRemainder)
@@ -35,13 +31,12 @@ namespace _13.Decimal_to_Hex
                         case 15: remainder = "F"; break;
                         default: remainder = checkRemainder.ToString(); break;
                     }
-                    hexNum = remainder + hexNum;
-                    decNum /= 16;
+                    hexadecimalNumberAsString = remainder + hexadecimalNumberAsString;
+                    deciamlInputNumber /= 16;
                 }
 
-                Console.WriteLine(hexNum);
+                Console.WriteLine(hexadecimalNumberAsString);
             }
         }
-
     }
 }

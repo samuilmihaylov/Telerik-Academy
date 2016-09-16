@@ -1,29 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _07.Point_in_a_circle
+﻿namespace _07.Point_in_a_circle
 {
+    using System;
+
     class PointInACircle
     {
         static void Main(string[] args)
         {
-            double x = Double.Parse(Console.ReadLine());
-            double y = Double.Parse(Console.ReadLine());
+            double pointX = Double.Parse(Console.ReadLine());
+            double pointY = Double.Parse(Console.ReadLine());
 
-            double distance = Math.Sqrt(Math.Pow((x), 2) + Math.Pow((y), 2));
+            double circleDistance = Math.Sqrt(Math.Pow((pointX), 2) + Math.Pow((pointY), 2));
 
-            bool check = Math.Pow((x - 0), 2) + Math.Pow((y - 0), 2) <= Math.Pow(2, 2);
+            bool isInCircle = Math.Pow((pointX - 0), 2) + Math.Pow((pointY - 0), 2) <= Math.Pow(2, 2);
 
-            if (check)
+            if (isInCircle)
             {
-                Console.WriteLine("yes {0:0.00}", distance);
+                Console.WriteLine("yes {0:0.00}", circleDistance);
             }
             else
             {
-                Console.WriteLine("no {0:0.00}", distance);
+                Console.WriteLine("no {0:0.00}", circleDistance);
             }
         }
     }

@@ -1,45 +1,55 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _06.Four_digits
+﻿namespace _06.Four_digits
 {
+    using System;
+    
     class FourDigits
     {
         static void Main(string[] args)
         {
-            string stringNumber = Console.ReadLine();
-            char[] array = stringNumber.ToCharArray();
+            string inputNumberAsString = Console.ReadLine();
 
-            //first digit
-            char a = stringNumber[0];
+            char[] charArray = inputNumberAsString.ToCharArray();
 
-            //second digit
-            char b = stringNumber[1];
+            char firstDigitAsChar = inputNumberAsString[0];
 
-            //third digit
-            char c = stringNumber[2];
+            char secondDigitAsChar = inputNumberAsString[1];
 
-            //fourt digit
-            char d = stringNumber[3];
+            char thirdDigitAsChar = inputNumberAsString[2];
 
-            double sum = char.GetNumericValue(a) + char.GetNumericValue(b) + char.GetNumericValue(c) + char.GetNumericValue(d);
+            char fourtDigitAsChar = inputNumberAsString[3];
 
-            Console.WriteLine(sum);
-            Console.WriteLine("{0}{1}{2}{3}", d, c, b, a);
-            Console.WriteLine("{0}{1}{2}{3}", d, a, b, c);
-            Console.WriteLine("{0}{1}{2}{3}", a, c, b, d);
+            double sumOfDigits = char.GetNumericValue(firstDigitAsChar) + char.GetNumericValue(secondDigitAsChar) + char.GetNumericValue(thirdDigitAsChar) + char.GetNumericValue(fourtDigitAsChar);
 
-            // SECOND METHOD
+            Console.WriteLine(sumOfDigits);
 
-            int intNumber = Int32.Parse(Console.ReadLine());
+            // The number in reversed order
+            string reversedNumberAsString = "";
+            for (int index = charArray.Length-1; index >= 0; index--)
+            {
+                reversedNumberAsString += charArray[index];
+            }
 
-            int firstDigit = (intNumber / 1000) % 10;
-            int secondDigit = (intNumber / 100) % 10;
-            int thirdDigit = (intNumber / 10) % 10;
-            int fourtDigit = (intNumber % 10);
+            Console.WriteLine(reversedNumberAsString);
+
+            // Puts the last digit in the first position
+            char[] newCharArray = new char[charArray.Length];
+            Array.Copy(charArray, newCharArray, charArray.Length);
+            newCharArray[0] = fourtDigitAsChar;
+            newCharArray[3] = firstDigitAsChar;
+            Console.WriteLine(newCharArray);
+
+            // Exchanges the second and the third digits
+            charArray[1] = thirdDigitAsChar;
+            charArray[2] = secondDigitAsChar;
+            Console.WriteLine(charArray);
+
+            // An other way to extract the digits
+            int inputNumber = Int32.Parse(Console.ReadLine());
+
+            int firstDigit = (inputNumber / 1000) % 10;
+            int secondDigit = (inputNumber / 100) % 10;
+            int thirdDigit = (inputNumber / 10) % 10;
+            int fourtDigit = (inputNumber % 10);
 
             Console.WriteLine(firstDigit + secondDigit + thirdDigit + fourtDigit);
         }

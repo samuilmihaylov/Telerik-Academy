@@ -1,28 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _09.Sum_of_n_Numbers
+﻿namespace _09.Sum_of_n_Numbers
 {
+    using System;
+
     class SumOfNNumbers
     {
         static void Main(string[] args)
         {
-            double result = 0;
+            double totalSum = 0;
 
-            int N = int.Parse(Console.ReadLine());
+            int inputCountOfNumbers = int.Parse(Console.ReadLine());
 
-            for (int i = 1; i <= N; i++)
-
+            for (int i = 1; i <= inputCountOfNumbers; i++)
             {
-                double val = double.Parse(Console.ReadLine());
+                double inputNumber = double.Parse(Console.ReadLine());
 
-                result = result + val;
+                totalSum = totalSum + inputNumber;
             }
 
-            Console.WriteLine(result);
+            Console.WriteLine(totalSum);
         }
     }
 }

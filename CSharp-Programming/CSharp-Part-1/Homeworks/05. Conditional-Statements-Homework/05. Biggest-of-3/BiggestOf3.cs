@@ -1,22 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _05.Biggest_of_3
+﻿namespace _05.Biggest_of_3
 {
+    using System;
+
     class BiggestOf3
     {
         static void Main(string[] args)
         {
-            double A = double.Parse(Console.ReadLine());
-            double B = double.Parse(Console.ReadLine());
-            double C = double.Parse(Console.ReadLine());
+            double numberA = double.Parse(Console.ReadLine());
+            double numberB = double.Parse(Console.ReadLine());
+            double numberC = double.Parse(Console.ReadLine());
 
-            double biggestAB = Math.Max(A, B);
-            double biggestAC = Math.Max(A, C);
-
+            double biggestAB = Math.Max(numberA, numberB);
+            double biggestAC = Math.Max(numberA, numberC);
 
             if (biggestAB > biggestAC)
             {
@@ -26,7 +21,6 @@ namespace _05.Biggest_of_3
             {
                 Console.WriteLine(biggestAC);
             }
-
         }
     }
 }

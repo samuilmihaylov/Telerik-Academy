@@ -1,28 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _02.Bonus_Score
+﻿namespace _02.Bonus_Score
 {
+    using System;
+
     class BonusScore
     {
         static void Main(string[] args)
         {
-            int score = int.Parse(Console.ReadLine());
+            int inputScore = int.Parse(Console.ReadLine());
 
-            if (score > 0 && score < 4)
+            if (inputScore > 0 && inputScore < 4)
             {
-                Console.WriteLine(score * 10);
+                Console.WriteLine(inputScore * 10);
             }
-            else if (score >= 4 && score <= 6)
+            else if (inputScore >= 4 && inputScore <= 6)
             {
-                Console.WriteLine(score*100);
+                Console.WriteLine(inputScore * 100);
             }
-            else if (score > 6 && score <= 9)
+            else if (inputScore > 6 && inputScore <= 9)
             {
-                Console.WriteLine(score*1000);
+                Console.WriteLine(inputScore * 1000);
             }
             else
             {

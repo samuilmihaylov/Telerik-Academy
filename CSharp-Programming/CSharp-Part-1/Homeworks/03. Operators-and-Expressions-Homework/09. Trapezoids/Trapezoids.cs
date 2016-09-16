@@ -1,23 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Globalization;
-
-namespace _09.Trapezoids
+﻿namespace _09.Trapezoids
 {
+    using System;
+
     class Trapezoids
     {
         static void Main(string[] args)
         {
-            double a = double.Parse(Console.ReadLine());
-            double b = double.Parse(Console.ReadLine());
-            double h = double.Parse(Console.ReadLine());
+            double trapezoidSideA = double.Parse(Console.ReadLine());
+            double trapezoidSideB = double.Parse(Console.ReadLine());
+            double trapezoidHeight = double.Parse(Console.ReadLine());
 
-            double area = ((a + b)*h) / 2;
+            double area = ((trapezoidSideA + trapezoidSideB) * trapezoidHeight) / 2;
 
-            Console.WriteLine(area.ToString("F7", CultureInfo.InvariantCulture));
+            Console.WriteLine(area.ToString("F7"));
         }
     }
 }

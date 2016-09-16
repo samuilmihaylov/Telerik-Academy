@@ -1,61 +1,62 @@
-﻿using System;
-
-namespace _07.Sort_3_Numbers
+﻿namespace _07.Sort_3_Numbers
 {
+    using System;
+
     class Sort3Numbers
     {
         static void Main(string[] args)
         {
-            short A = short.Parse(Console.ReadLine());
-            short B = short.Parse(Console.ReadLine());
-            short C = short.Parse(Console.ReadLine());
+            short numberA = short.Parse(Console.ReadLine());
+            short numberB = short.Parse(Console.ReadLine());
+            short numberC = short.Parse(Console.ReadLine());
 
-            bool isTrue = (A >= -1000 && A <= 1000) && (B >= -1000 && B <= 1000) && (C >= -1000 && A <= 1000);
+            bool isTrue = (numberA >= -1000 && numberA <= 1000) &&
+                    (numberB >= -1000 && numberB <= 1000) && 
+                    (numberC >= -1000 && numberA <= 1000);
 
             while (isTrue)
             {
-                if (A > B)
+                if (numberA > numberB)
                 {
-                    if (A > C)
+                    if (numberA > numberC)
                     {
-                        if (B > C)
+                        if (numberB > numberC)
                         {
-                            Console.WriteLine("{0} {1} {2}", A, B, C);
+                            Console.WriteLine("{0} {1} {2}", numberA, numberB, numberC);
                             return;
                         }
                         else
                         {
-                            Console.WriteLine("{0} {1} {2}", A, C, B);
+                            Console.WriteLine("{0} {1} {2}", numberA, numberC, numberB);
                             return;
                         }
                     }
                     else
                     {
-                        Console.WriteLine("{0} {1} {2}", C, A, B);
+                        Console.WriteLine("{0} {1} {2}", numberC, numberA, numberB);
                         return;
                     }
                 }
-
-                else if (B > C)
+                else if (numberB > numberC)
                 {
-                    if (A > C)
+                    if (numberA > numberC)
                     {
-                        Console.WriteLine("{0} {1} {2}", B, A, C);
+                        Console.WriteLine("{0} {1} {2}", numberB, numberA, numberC);
                         return;
                     }
                     else
                     {
-                        Console.WriteLine("{0} {1} {2}", B, C, A);
+                        Console.WriteLine("{0} {1} {2}", numberB, numberC, numberA);
                         return;
                     }
                 }
-
                 else
                 {
-                    Console.WriteLine("{0} {1} {2}", C, B, A);
+                    Console.WriteLine("{0} {1} {2}", numberC, numberB, numberA);
                     return;
                 }
             }
+
             return;
         }
     }

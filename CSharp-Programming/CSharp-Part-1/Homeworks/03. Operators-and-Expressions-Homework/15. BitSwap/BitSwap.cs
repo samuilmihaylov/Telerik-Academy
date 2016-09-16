@@ -1,62 +1,59 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _15.BitSwap
+﻿namespace _15.BitSwap
 {
+    using System;
+
     class BitSwap
     {
         static void Main(string[] args)
         {
-            uint N = uint.Parse(Console.ReadLine()); // input for number n
+            uint inputNumber = uint.Parse(Console.ReadLine());
+            int indexOfTheFirstBit = int.Parse(Console.ReadLine());
+            int indexOfTheSecondBit = int.Parse(Console.ReadLine());
+            int endBit = int.Parse(Console.ReadLine());
 
-            int p = int.Parse(Console.ReadLine()); // position of first bit
-            int q = int.Parse(Console.ReadLine()); // position of second bit
-            int k = int.Parse(Console.ReadLine()); // end bit
-            int countBit = 0;
+            int bitCount = 0;
 
-            for (int i = p; i < p + k; i++)
+            for (int i = indexOfTheFirstBit; i < indexOfTheFirstBit + endBit; i++)
             {
-                // get the value of i bit
+                // Get the value of i bit
                 uint mask = (uint)1 << i;
-                int iBit = (int)(N & mask) >> i;
+                int iBit = (int)(inputNumber & mask) >> i;
 
-                // get the value of j bit
-                mask = (uint)1 << q + countBit;
-                int jBit = (int)(N & mask) >> q + countBit;
+                // Get the value of j bit
+                mask = (uint)1 << indexOfTheSecondBit + bitCount;
+                int jBit = (int)(inputNumber & mask) >> indexOfTheSecondBit + bitCount;
 
                 if (iBit == 0)
                 {
-                    // put 0 on j position
-                    mask = (uint)~(1 << q + countBit);
-                    N = (uint)(N & mask);
+                    // Put 0 on j position
+                    mask = (uint)~(1 << indexOfTheSecondBit + bitCount);
+                    inputNumber = (uint)(inputNumber & mask);
                 }
 
                 else if (iBit == 1)
                 {
-                    // put 1 on j position
-                    mask = (uint)1 << q + countBit;
-                    N = (uint)(N | mask);
+                    // Put 1 on j position
+                    mask = (uint)1 << indexOfTheSecondBit + bitCount;
+                    inputNumber = (uint)(inputNumber | mask);
                 }
 
                 if (jBit == 0)
                 {
-                    // put 0 on i position
+                    // Put 0 on i position
                     mask = (uint)~(1 << i);
-                    N = (uint)(N & mask);
+                    inputNumber = (uint)(inputNumber & mask);
                 }
 
                 else if (jBit == 1)
                 {
-                    // put 1 on i position
+                    // Put 1 on i position
                     mask = (uint)1 << i;
-                    N = (uint)(N | mask);
+                    inputNumber = (uint)(inputNumber | mask);
                 }
-                countBit++;
+                bitCount++;
             }
-            Console.WriteLine(N);
+            Console.WriteLine(inputNumber);
+
             return;
         }
     }

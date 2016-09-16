@@ -1,20 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _01.Sum_of_3_numbers
+﻿namespace _01.Sum_of_3_numbers
 {
+    using System;
+
     class SumOf3Numbers
     {
         static void Main(string[] args)
         {
-            short a = short.Parse(Console.ReadLine());
-            short b = short.Parse(Console.ReadLine());
-            short c = short.Parse(Console.ReadLine());
+            float numberA = float.Parse(Console.ReadLine());
+            float numberB = float.Parse(Console.ReadLine());
+            float numberC = float.Parse(Console.ReadLine());
 
-            Console.WriteLine(a+b+c);
+            float totalSum = numberA + numberB + numberC;
+
+            Console.WriteLine(totalSum);
         }
     }
 }

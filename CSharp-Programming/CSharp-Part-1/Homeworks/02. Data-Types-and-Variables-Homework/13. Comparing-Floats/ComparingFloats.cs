@@ -1,27 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _13.Comparing_Floats
+﻿namespace _13.Comparing_Floats
 {
+    using System;
+
     class ComparingFloats
     {
         static void Main(string[] args)
         {
-            double a = double.Parse(Console.ReadLine());
-            double b = double.Parse(Console.ReadLine());
+            double numberA = double.Parse(Console.ReadLine());
+            double numberB = double.Parse(Console.ReadLine());
             double eps = 0.000001;
 
-
-            if ((Math.Abs(a - b) <= eps))
+            if ((Math.Abs(numberA - numberB) <= eps))
             {
-                Console.WriteLine("true");
+                Console.WriteLine("The numbers are equal");
             }
             else
-                Console.WriteLine("false");
+            {
+                Console.WriteLine("The numbers are not equal");
+            }
         }
-
     }
 }

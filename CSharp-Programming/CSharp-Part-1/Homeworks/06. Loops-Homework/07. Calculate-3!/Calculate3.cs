@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Numerics;
-
-namespace _07.Calculate_3_
+﻿namespace _07.Calculate_3_
 {
+    using System;
+    using System.Numerics;
+
     class Calculate3
     {
         static void Main(string[] args)

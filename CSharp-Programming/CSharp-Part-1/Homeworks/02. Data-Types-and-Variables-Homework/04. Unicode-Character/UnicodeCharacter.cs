@@ -1,19 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _04.Unicode_Character
+﻿namespace _04.Unicode_Character
 {
+    using System;
+
     class UnicodeCharacter
     {
         static void Main(string[] args)
         {
-            int var = 42;
-            Console.WriteLine("The variable 42 in hexadecimal is {0:X}", var);
-            char symbol = '\u002A';
-            Console.WriteLine("The symbol is {0}", symbol);
+            int intVariable = 42;
+            Console.WriteLine("The variable 42 in hexadecimal is {0:X}", intVariable);
+
+            char symbolUnicode = '\u002A';
+            Console.WriteLine("The symbol is {0}", symbolUnicode);
         }
     }
 }

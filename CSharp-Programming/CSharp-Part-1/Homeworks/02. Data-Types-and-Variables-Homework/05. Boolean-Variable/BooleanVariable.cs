@@ -1,25 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _05.Boolean_Variable
+﻿namespace _05.Boolean_Variable
 {
+    using System;
+
     class BooleanVariable
     {
         static void Main(string[] args)
         {
-            bool isFemale = false;
-            Console.WriteLine("Are you female: yes/no");
+            Console.WriteLine("Are you female: Yes/No");
             string answer = Console.ReadLine();
-            if (answer.Equals("no"))
+
+            bool isFemale = false;
+            if (answer.Equals("Yes"))
             {
-                Console.WriteLine("You are male.");
+                isFemale = true;
+            }
+
+            if (isFemale)
+            {
+                Console.WriteLine("You are female.");
             }
             else
             {
-                Console.WriteLine("Then you are female.");
+                Console.WriteLine("You are male.");
             }
         }
     }

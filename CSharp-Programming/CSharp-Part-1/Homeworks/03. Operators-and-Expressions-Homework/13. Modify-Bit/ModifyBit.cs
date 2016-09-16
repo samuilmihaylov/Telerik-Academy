@@ -1,34 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _13.Modify_Bit
+﻿namespace _13.Modify_Bit
 {
+    using System;
+
     class ModifyBit
     {
         static void Main(string[] args)
         {
-            ulong N = ulong.Parse(Console.ReadLine()); // вкарвам числото
+            ulong inputNumber = ulong.Parse(Console.ReadLine());
 
-            byte P = byte.Parse(Console.ReadLine()); // вкарвам позицията
+            byte inputIndexOfBit = byte.Parse(Console.ReadLine());
 
-            byte v = byte.Parse(Console.ReadLine()); // вкарвам 0 или 1, според зависи с каква стойност искам да променя бита на позиция P
+            byte inputBitValue = byte.Parse(Console.ReadLine());
 
-            if (P >= 0 && P < 64) // правя проверка дали числото се намира между 0 и 64
+            if (inputIndexOfBit >= 0 && inputIndexOfBit < 64)
             {
-                if (v == 1) // когато искам да променя бита на позиция P с 1
+                if (inputBitValue == 1)
                 {
-                    ulong mask = (ulong)1 << P; // правя маска като единицата равна на 0001 изместваме позицията с P  
-                    ulong newNumber = N | mask; // използавам битовия оператор ИЛИ
+                    ulong mask = (ulong)1 << inputIndexOfBit;
+                    ulong newNumber = inputNumber | mask;
                     Console.WriteLine(newNumber);
                 }
 
-                if (v == 0)
+                if (inputBitValue == 0)
                 {
-                    ulong mask = (ulong)~(1 << P); // правя маската, като обръщам всичките битове с противоположния им и измествам с позиция P
-                    ulong newNumber = N & mask; // използвам битовия оператор И
+                    ulong mask = (ulong)~(1 << inputIndexOfBit);
+                    ulong newNumber = inputNumber & mask;
                     Console.WriteLine(newNumber);
                 }
             }

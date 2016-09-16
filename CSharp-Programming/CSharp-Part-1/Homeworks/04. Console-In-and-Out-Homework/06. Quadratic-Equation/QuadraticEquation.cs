@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Globalization;
-
-namespace _06.Quadratic_Equation
+﻿namespace _06.Quadratic_Equation
 {
+    using System;
+
     class QuadraticEquation
     {
         static void Main(string[] args)
@@ -20,6 +15,7 @@ namespace _06.Quadratic_Equation
             if (D < 0)
             {
                 Console.WriteLine("no real roots");
+
                 return;
             }
 
@@ -31,8 +27,10 @@ namespace _06.Quadratic_Equation
 
                 double smaller = Math.Min(rootOne, rootTwo);
                 double bigger = Math.Max(rootOne, rootTwo);
-                Console.WriteLine(smaller.ToString("F2", CultureInfo.InvariantCulture));
-                Console.WriteLine(bigger.ToString("F2", CultureInfo.InvariantCulture));
+
+                Console.WriteLine(smaller.ToString("F2"));
+                Console.WriteLine(bigger.ToString("F2"));
+
                 return;
             }
 
@@ -40,7 +38,8 @@ namespace _06.Quadratic_Equation
             {
                 double theOnlyOneRoot = (-b / (2 * a));
 
-                Console.WriteLine(theOnlyOneRoot.ToString("F2", CultureInfo.InvariantCulture));
+                Console.WriteLine(theOnlyOneRoot.ToString("F2"));
+
                 return;
             }
         }

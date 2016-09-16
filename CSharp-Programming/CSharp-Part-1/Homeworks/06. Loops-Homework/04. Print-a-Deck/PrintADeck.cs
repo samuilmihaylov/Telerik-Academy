@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _04.Print_a_Deck
+﻿namespace _04.Print_a_Deck
 {
+    using System;
+    using System.Collections.Generic;
+
     class PrintADeck
     {
         static void Main(string[] args)

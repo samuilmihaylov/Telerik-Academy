@@ -1,22 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _02.Not_Divisible_Numbers
+﻿namespace _02.Not_Divisible_Numbers
 {
+    using System;
+
     class NotDivisibleNumbers
     {
         static void Main(string[] args)
         {
-            int N = int.Parse(Console.ReadLine());
+            int inputNumber = int.Parse(Console.ReadLine());
 
-            for (int i = 1; i <= N; i++)
+            for (int index = 1; index <= inputNumber; index++)
             {
-                if (i % 3 != 0 && i % 7 != 0)
+                if (index % 3 != 0 && index % 7 != 0)
                 {
-                    Console.Write(i + " ");
+                    Console.Write(index + " ");
                 }
             }
         }

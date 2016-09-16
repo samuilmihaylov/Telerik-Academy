@@ -1,28 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _05.Calculate_
+﻿namespace _05.Calculate_
 {
+    using System;
+
     class Calculate
     {
         static void Main(string[] args)
         {
             int N = int.Parse(Console.ReadLine());
             double x = double.Parse(Console.ReadLine());
-            double factorial = 1;
-            double S = 1 + 1 / x;
 
-            for (int i = 2; i <= N; i++)
+            double factorial = 1;
+            double sum = 1 + 1 / x;
+
+            for (int index = 2; index <= N; index++)
             {
-                factorial *= i;
-                double pow = Math.Pow(x, i);
-                S += (factorial / pow);
+                factorial *= index;
+                double pow = Math.Pow(x, index);
+                sum += (factorial / pow);
             }
 
-            Console.WriteLine("{0:F5}", S);
+            Console.WriteLine("{0:F5}", sum);
         }
     }
 }

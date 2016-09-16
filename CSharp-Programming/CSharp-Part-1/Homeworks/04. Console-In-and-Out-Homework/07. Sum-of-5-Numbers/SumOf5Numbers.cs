@@ -1,23 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _07.Sum_of_5_Numbers
+﻿namespace _07.Sum_of_5_Numbers
 {
+    using System;
+
     class SumOf5Numbers
     {
         static void Main(string[] args)
         {
             int result = 0;
 
-            for (int i = 1; i <= 5; i++)
+            for (int index = 1; index <= 5; index++)
 
             {             
-                int val = int.Parse(Console.ReadLine());
+                int inputNumber = int.Parse(Console.ReadLine());
            
-                result = result + val;          
+                result = result + inputNumber;          
             }
 
             Console.WriteLine(result);

@@ -1,38 +1,35 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _12.Decimal_to_Binary
+﻿namespace _12.Decimal_to_Binary
 {
+    using System;
+
     class DecimalToBinary
     {
         static void Main(string[] args)
         {
-            long decNum = long.Parse(Console.ReadLine());
+            long decimalInputNumber = long.Parse(Console.ReadLine());
 
-            string s = "";
+            string binaryString = "";
 
-            if (decNum == 0)
+            if (decimalInputNumber == 0)
             {
-                s += '0';
+                binaryString += '0';
             }
 
-            while (decNum > 0)
+            while (decimalInputNumber > 0)
             {
-                if (decNum % 2 == 1)
+                if (decimalInputNumber % 2 == 1)
                 {
-                    s += '1';
+                    binaryString += '1';
                 }
-                else if (decNum % 2 == 0)
+                else if (decimalInputNumber % 2 == 0)
                 {
-                    s += '0';
+                    binaryString += '0';
                 }
-                decNum = decNum / 2;
+                decimalInputNumber = decimalInputNumber / 2;
             }
-            char[] charArray = s.ToCharArray();
+            char[] charArray = binaryString.ToCharArray();
             Array.Reverse(charArray);
+            
             Console.WriteLine(charArray);
         }
     }

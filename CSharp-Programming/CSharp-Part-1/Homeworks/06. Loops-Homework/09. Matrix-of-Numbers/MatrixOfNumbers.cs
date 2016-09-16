@@ -1,20 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _09.Matrix_of_Numbers
+﻿namespace _09.Matrix_of_Numbers
 {
+    using System;
+
     class MatrixOfNumbers
     {
         static void Main(string[] args)
         {
-            int N = int.Parse(Console.ReadLine());
+            int inputNumber = int.Parse(Console.ReadLine());
 
-            for (int row = 1; row <= N; row++)
+            for (int row = 1; row <= inputNumber; row++)
             {
-                for (int num = row; num < row + N; num++)    // num <= (row + n - 1)
+                for (int num = row; num < row + inputNumber; num++)    // num <= (row + n - 1)
                 {
                     Console.Write("{0} ", num);
                 }

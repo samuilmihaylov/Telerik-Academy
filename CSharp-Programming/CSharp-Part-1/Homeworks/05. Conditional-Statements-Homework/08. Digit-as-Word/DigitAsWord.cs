@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _08.Digit_as_Word
+﻿namespace _08.Digit_as_Word
 {
+    using System;
+
     class DigitAsWord
     {
         static void Main(string[] args)
         {
-            string digit = Console.ReadLine();
+            string inputDigit = Console.ReadLine();
 
-            switch (digit)
+            switch (inputDigit)
             {
                 case "0":
                     Console.WriteLine("zero");

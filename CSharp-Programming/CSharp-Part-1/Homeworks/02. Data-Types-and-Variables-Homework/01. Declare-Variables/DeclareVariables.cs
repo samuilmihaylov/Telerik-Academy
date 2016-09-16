@@ -1,23 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _01.Declare_Variables
+﻿namespace _01.Declare_Variables
 {
     class DeclareVariables
     {
         static void Main(string[] args)
         {
-            byte b = 97;
-            sbyte sb = -115;
-            short s = -10000;
-            ushort us = 52130;
-            int i = -10000;
-            uint ui = 52130;
-            long l = 4825932;
-            ulong ul = 4825932;
+            byte byteVariable = 97;
+            sbyte shortByteVariable = -115;
+            short shortVariable = -10000;
+            ushort unsignShortVariable = 52130;
+            int integerVariable = -10000;
+            uint unsignIntegerVariable = 52130;
+            long longVariable = 4825932;
+            ulong unsignLongVariable = 4825932;
         }
     }
 }

@@ -1,24 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _01.Odd_or_Even
+﻿namespace _01.Odd_or_Even
 {
+    using System;
+
     class OddOrEven
     {
         static void Main(string[] args)
         {
-            int i = Convert.ToInt32(Console.ReadLine());
+            int inputNumber = Convert.ToInt32(Console.ReadLine());
 
-            if ((i % 2) == 0)
+            if ((inputNumber % 2) == 0)
             {
-                Console.WriteLine("even {0}", i);
+                Console.WriteLine("even {0}", inputNumber);
             }
             else
             {
-                Console.WriteLine("odd {0}", i);
+                Console.WriteLine("odd {0}", inputNumber);
             }
         }
     }

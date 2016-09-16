@@ -1,26 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _08.Prime_Check
+﻿namespace _08.Prime_Check
 {
+    using System;
+
     class PrimeCheck
     {
         static void Main()
         {
-            int number = int.Parse(Console.ReadLine());
+            int inputNumber = int.Parse(Console.ReadLine());
 
-            if (number < 0 || number == 0 || number == 1)
+            if (inputNumber < 0 || inputNumber == 0 || inputNumber == 1)
             {
                 Console.WriteLine("false");
             }
             else
             {
-                for (int i = 2; i <= number / 2; i++)
+                for (int index = 2; index <= inputNumber / 2; index++)
                 {
-                    if (number % i == 0)
+                    if (inputNumber % index == 0)
                     {
                         Console.WriteLine("false");
                         return;

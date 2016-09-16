@@ -1,21 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Globalization;
-
-namespace _14.Print_the_ASCII_Table
+﻿namespace _14.Print_the_ASCII_Table
 {
+    using System;
+
     class PrintTheASCIITable
     {
         static void Main(string[] args)
         {
-            int i;
-            for (i = 33; i <= 126; i++)
+            int ASCIICode;
+            for (ASCIICode = 32; ASCIICode <= 126; ASCIICode++)
             {
-                char c = Convert.ToChar(i);
-                Console.Write(c);
+                char symbol = Convert.ToChar(ASCIICode);
+                Console.Write(symbol);
             }
             Console.WriteLine();
         }

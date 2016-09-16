@@ -1,39 +1,35 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _15.GCD
+﻿namespace _15.GCD
 {
+    using System;
+
     class GCD
     {
         static void Main(string[] args)
         {
             string[] splitNumbers = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
-            int A = Math.Abs(int.Parse(splitNumbers[0]));
-            int B = Math.Abs(int.Parse(splitNumbers[1]));
+            int firstNumber = Math.Abs(int.Parse(splitNumbers[0]));
+            int secondNumber = Math.Abs(int.Parse(splitNumbers[1]));
 
             int gcd = 0;
 
-            int remainder = A % B;
+            int remainder = firstNumber % secondNumber;
 
             while (remainder != 0)
             {
-                remainder = A % B;
-                A = B;
-                B = remainder;
+                remainder = firstNumber % secondNumber;
+                firstNumber = secondNumber;
+                secondNumber = remainder;
             }
 
-            if (A != 0)
+            if (firstNumber != 0)
             {
-                gcd = A;
+                gcd = firstNumber;
                 Console.WriteLine(gcd);
             }
             else
             {
-                gcd = B;
+                gcd = secondNumber;
                 Console.WriteLine(gcd);
             }
         }

@@ -1,30 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _11.Binary_to_Decimal
+﻿namespace _11.Binary_to_Decimal
 {
+    using System;
+
     class BinaryToDecimal
     {
         static void Main(string[] args)
         {
             string binaryInput = Console.ReadLine();
-            int length = binaryInput.Length;
-            int val = 0;
-            long sum = 0;
-            int[] binaryArr = new int[length];
+            int binaryInputLength = binaryInput.Length;
+            int[] binaryArr = new int[binaryInputLength];
 
-            for (int i = 0; i < length; i++)
+            for (int i = 0; i < binaryInputLength; i++)
             {
-                val = (int)Char.GetNumericValue(binaryInput[i]);
-                binaryArr[i] = val;
+                int value = 0;
+                value = (int)Char.GetNumericValue(binaryInput[i]);
+                binaryArr[i] = value;
             }
 
             Array.Reverse(binaryArr);
 
-            for (int j = 0; j < length; j++)
+            long sum = 0;
+            for (int j = 0; j < binaryInputLength; j++)
             {
                 sum += binaryArr[j] * (long)(Math.Pow(2,j));
             }

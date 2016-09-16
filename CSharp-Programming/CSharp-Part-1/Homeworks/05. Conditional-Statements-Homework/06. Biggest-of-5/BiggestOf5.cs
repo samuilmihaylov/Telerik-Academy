@@ -1,30 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _06.Biggest_of_5
+﻿namespace _06.Biggest_of_5
 {
+    using System;
+    using System.Linq;
+
     class BiggestOf5
     {
         static void Main(string[] args)
         {
-            double val;
-            double[] arr = new double[5];
+            double inputNumber;
+            double[] array = new double[5];
 
-            for (int i = 0; i < 5; i++)
+            for (int index = 0; index < 5; index++)
             {
-               val = double.Parse(Console.ReadLine());
+               inputNumber = double.Parse(Console.ReadLine());
 
-                if (val <= 200 && val >= -200)
+                if (inputNumber <= 200 && inputNumber >= -200)
                 {
-                    arr[i] = val;
+                    array[index] = inputNumber;
                 }
-
             }
-            double max = arr.Max();
-            Console.WriteLine(max);
+            double maxNumberInArray = array.Max();
+
+            Console.WriteLine(maxNumberInArray);
         }
     }
 }

@@ -1,33 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _11.Interval
+﻿namespace _11.Interval
 {
+    using System;
+
     class Interval
     {
         static void Main(string[] args)
         {
-            uint N = uint.Parse(Console.ReadLine());
-            uint M = uint.Parse(Console.ReadLine());
+            uint intervalStartNumber = uint.Parse(Console.ReadLine());
+            uint intervalEndNumber = uint.Parse(Console.ReadLine());
 
-            int count = 0;
+            int numbersCount = 0;
 
-            if (N >= 0 && M >= N && M <= 2000)
+            if (intervalStartNumber >= 0 && intervalEndNumber >= intervalStartNumber && intervalEndNumber <= 2000)
             {
-                for (uint i = N + 1; i < M; i++)
+                for (uint i = intervalStartNumber + 1; i < intervalEndNumber; i++)
                 {
                     uint number = i % 5;
 
                     if (number == 0)
                     {
-                        count++;
+                        numbersCount++;
                     }
                 }
-                Console.WriteLine(count);
 
+                Console.WriteLine(numbersCount);
             }
 
         }

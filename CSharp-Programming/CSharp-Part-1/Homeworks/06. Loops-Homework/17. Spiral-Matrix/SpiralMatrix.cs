@@ -1,32 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _17.Spiral_Matrix
+﻿namespace _17.Spiral_Matrix
 {
+    using System;
+
     class SpiralMatrix
     {
         static void Main(string[] args)
         {
-
-            int n = int.Parse(Console.ReadLine());
-            int[,] matrix = new int[n, n];
+            int inputLength = int.Parse(Console.ReadLine());
+            int[,] matrix = new int[inputLength, inputLength];
             int row = 0;
             int col = 0;
             string direction = "right";
-            int maxRotations = n * n;
+            int maxRotations = inputLength * inputLength;
 
             for (int i = 1; i <= maxRotations; i++)
             {
-                if (direction == "right" && (col > n - 1 || matrix[row, col] != 0))
+                if (direction == "right" && (col > inputLength - 1 || matrix[row, col] != 0))
                 {
                     direction = "down";
                     col--;
                     row++;
                 }
-                if (direction == "down" && (row > n - 1 || matrix[row, col] != 0))
+                if (direction == "down" && (row > inputLength - 1 || matrix[row, col] != 0))
                 {
                     direction = "left";
                     row--;
@@ -38,7 +33,6 @@ namespace _17.Spiral_Matrix
                     col++;
                     row--;
                 }
-
                 if (direction == "up" && row < 0 || matrix[row, col] != 0)
                 {
                     direction = "right";
@@ -66,9 +60,9 @@ namespace _17.Spiral_Matrix
                 }
             }
 
-            for (int r = 0; r < n; r++)
+            for (int r = 0; r < inputLength; r++)
             {
-                for (int c = 0; c < n; c++)
+                for (int c = 0; c < inputLength; c++)
                 {
                     Console.Write("{0} ",matrix[r, c]);
                 }
