@@ -1,7 +1,10 @@
-# Object-Oriented-Programming
+# Object-Oriented-Programming Course Repository
 
-Repository for the course [Object-oriented programming with C#](https://telerikacademy.com/Courses/Courses/Details/338) at [Telerik Academy](https://telerikacademy.com)
+The course "Object-oriented programming (OOP)" introduces the principles of working with classes and objects and paradigms of object-oriented programming.
 
+The course focuses on the principles of abstraction, data encapsulation , inheritance and polymorphism; virtual methods; modeling of the real world with classes; using UML class diagrams; reuse of code and working with interfaces, abstract objects and data.
+
+The cource covers topics such as static members, structures, enumerations, generic classes, namespaces, indexers, operators, attributes, extension methods, anonymous types, delegates, events, lambda expressions, LINQ, the Common Type System in .NET Framework (the value and reference types and the system types and standard interfaces, defined in the CTS).
 
 ## Course program
 
