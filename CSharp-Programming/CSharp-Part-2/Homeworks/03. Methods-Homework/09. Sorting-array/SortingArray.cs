@@ -21,15 +21,15 @@ namespace _09.Sorting_array
             }
 
             int[] sortedArr = new int[size];
-           
-
             sortedArr = ArraySort(arr);
+
             Console.WriteLine(string.Join(" ", sortedArr));
         }
 
         static int[] ArraySort(int[] array)
         {
             Array.Sort(array);
+
             return array;
         }
     }

@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _02.Maximal_sum
+﻿namespace _02.Maximal_sum
 {
+    using System;
+
     class MaximalSum
     {
         static void Main(string[] args)
         {
-            string[] sizes = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-            int rows = int.Parse(sizes[0]);
-            int columns = int.Parse(sizes[1]);
+            string[] matrixSizes = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            int rows = int.Parse(matrixSizes[0]);
+            int columns = int.Parse(matrixSizes[1]);
 
             int[,] matrix = new int[rows, columns];
 
@@ -47,6 +43,7 @@ namespace _02.Maximal_sum
                     }
                 }
             }
+
             Console.WriteLine(bestSum);
         }
     }

@@ -1,10 +1,7 @@
-﻿// Write a program that finds the largest area of equal neighbour elements in a 
-// rectangular matrix and prints its size.
-
-using System;
-
-namespace _07.Largest_area_in_matrix
+﻿namespace _07.Largest_area_in_matrix
 {
+    using System;
+
     class LargestAreaInMatrix
     {
         public static void Main(string[] args)
@@ -15,7 +12,6 @@ namespace _07.Largest_area_in_matrix
 
             int[,] matrix = new int[rows, columns];
 
-            // Entering the elements in matrix
             for (int row = 0; row < rows; row++)
             {
                 string[] inputRows = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
@@ -48,6 +44,7 @@ namespace _07.Largest_area_in_matrix
                     }
                 }
             }
+
             Console.WriteLine(bestCount);
         }
 
@@ -72,6 +69,7 @@ namespace _07.Largest_area_in_matrix
             {
                 result += DepthFirstSearch(array, row, col + 1, calc);
             }
+
             return result;
         }
     }

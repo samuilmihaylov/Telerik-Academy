@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _08.Sum_integers
+﻿namespace _08.Sum_integers
 {
+    using System;
+
     class SumIntegers
     {
         static void Main(string[] args)
@@ -13,7 +9,6 @@ namespace _08.Sum_integers
             string stringValues = Console.ReadLine();
 
             Console.WriteLine(SumOfIntegers(ArrayOfIntegers(stringValues)));
-
         }
 
         static int[] ArrayOfIntegers(string input)
@@ -34,7 +29,7 @@ namespace _08.Sum_integers
         {
             int sum = 0;
 
-            foreach(int value in intArray)
+            foreach (int value in intArray)
             {
                 sum += value;
             }

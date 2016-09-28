@@ -1,9 +1,8 @@
-﻿using System;
-using System.Linq;
-
-
-namespace _02.Compare_arrays
+﻿namespace _02.Compare_arrays
 {
+    using System;
+    using System.Linq;
+
     class CompareArrays
     {
         static void Main(string[] args)
@@ -31,7 +30,6 @@ namespace _02.Compare_arrays
             {
                 Console.WriteLine("Not equal");
             }
-
         }
     }
 }

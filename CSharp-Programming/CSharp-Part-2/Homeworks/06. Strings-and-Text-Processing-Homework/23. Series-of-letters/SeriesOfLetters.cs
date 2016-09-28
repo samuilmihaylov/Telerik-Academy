@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _23.Series_of_letters
+﻿namespace _23.Series_of_letters
 {
+    using System;
+    using System.Text;
+
     class SeriesOfLetters
     {
         static void Main(string[] args)
@@ -24,12 +21,15 @@ namespace _23.Series_of_letters
                 {
                     continue;
                 }
+
                 if(previousLetter != input[i])
                 {
                     sb.Append(input[i]);
                 }
+
                 previousLetter = input[i];
             }
+
             Console.WriteLine(sb.ToString());
         }
     }

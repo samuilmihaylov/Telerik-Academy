@@ -1,4 +1,5 @@
 ﻿using System;
+
 public class CompareCharArrays
 {
     private static void Main()
@@ -6,7 +7,9 @@ public class CompareCharArrays
         string charArr1 = Console.ReadLine();
         string charArr2 = Console.ReadLine();
 
-        for (int i = 0; i < Math.Min(charArr1.Length, charArr2.Length); i++)
+        int minimumArrayLength = Math.Min(charArr1.Length, charArr2.Length);
+
+        for (int i = 0; i < minimumArrayLength; i++)
         {
             if (charArr1[i] < charArr2[i])
             {

@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _01.Square_root
+﻿namespace _01.Square_root
 {
+    using System;
+
     class SquareRoot
     {
         static void Main(string[] args)
@@ -21,7 +17,6 @@ namespace _01.Square_root
 
                 Console.WriteLine("{0:F3}", Math.Sqrt(number));
             }
-
             catch (FormatException)
             {
                 Console.WriteLine("Invalid number");

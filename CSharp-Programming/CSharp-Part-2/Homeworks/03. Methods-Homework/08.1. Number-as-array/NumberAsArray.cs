@@ -10,21 +10,21 @@ namespace _08.Number_as_array
     {
         static void Main(string[] args)
         {
-            string[] sizes = Console.ReadLine().Split(' ');
-            int sizeA = int.Parse(sizes[0]);
-            int sizeB = int.Parse(sizes[1]);
+            string[] arraySizes = Console.ReadLine().Split(' ');
+            int sizeA = int.Parse(arraySizes[0]);
+            int sizeB = int.Parse(arraySizes[1]);
 
             string[] arrayA = Console.ReadLine().Split(' ');
             string[] arrayB = Console.ReadLine().Split(' ');
             int[] arrA = new int[sizeA];
             int[] arrB = new int[sizeB];
 
-            // adding the values in the first array
+            // Adding the values in the first array
             for (int i = 0; i < arrA.Length; i++)
             {
                 arrA[i] = int.Parse(arrayA[i]);
             }
-            // adding values in the second array
+            // Adding values in the second array
             for (int i = 0; i < arrB.Length; i++)
             {
                 arrB[i] = int.Parse(arrayB[i]);
@@ -33,10 +33,9 @@ namespace _08.Number_as_array
             int maxLength = Math.Max(arrA.Length, arrB.Length);
             int[] sumArray = new int[maxLength];
 
-            // resize the arrys with the max length
+            // Resize the arrys with the max length
             Array.Resize(ref arrA, maxLength);
             Array.Resize(ref arrB, maxLength);
-
 
             sumArray = SumOfArrays(arrA, arrB, sumArray, maxLength);
 
@@ -79,6 +78,7 @@ namespace _08.Number_as_array
                     sum = 0;
                 }
             }
+
             return Sum;
         }
     }

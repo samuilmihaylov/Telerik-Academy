@@ -1,8 +1,8 @@
-﻿using System;
-using System.Numerics;
-
-namespace _10.N_Factorial
+﻿namespace _10.N_Factorial
 {
+    using System;
+    using System.Numerics;
+
     class NFactorial
     {
         static void Main(string[] args)
@@ -12,19 +12,20 @@ namespace _10.N_Factorial
             Factorial(number);
 
             BigInteger factorial = Factorial(number);
+
             Console.WriteLine(factorial);
         }
 
         static BigInteger Factorial(int value)
         {
-            BigInteger fac = 1;
+            BigInteger factorial = 1;
 
             for (int i = value; i > 0; i--)
             {
-                fac *= i;
+                factorial *= i;
             }
 
-            return fac;
+            return factorial;
         }
     }
 }

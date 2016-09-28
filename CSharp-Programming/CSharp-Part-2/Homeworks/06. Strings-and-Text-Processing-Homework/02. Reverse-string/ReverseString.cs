@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _02.Reverse_string
+﻿namespace _02.Reverse_string
 {
+    using System;
+
     class ReverseString
     {
         static void Main(string[] args)

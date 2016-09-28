@@ -1,8 +1,8 @@
-﻿using System;
-using System.Numerics;
-
-namespace _03.Decimal_to_hexadecimal
+﻿namespace _03.Decimal_to_hexadecimal
 {
+    using System;
+    using System.Numerics;
+
     class DecimalToHexadecimal
     {
         static void Main(string[] args)
@@ -12,16 +12,17 @@ namespace _03.Decimal_to_hexadecimal
             Console.WriteLine(DecimalToHexadecimalNumber(decimalNumber));
         }
 
-        static string DecimalToHexadecimalNumber(BigInteger dec) 
+        static string DecimalToHexadecimalNumber(BigInteger decimalNumber) 
         {
             string hexValue = "";
 
-            while (dec > 0)
+            while (decimalNumber > 0)
             {
                 string remainder = "";
-                long checkRemainder = (long)dec % 16;
+                long checkRemainder = (long)decimalNumber % 16;
 
-                switch (checkRemainder) // taking the remainder to form the hexadecimal
+                // taking the remainder to form the hexadecimal
+                switch (checkRemainder) 
                 {
                     case 10: remainder = "A"; break;
                     case 11: remainder = "B"; break;
@@ -29,12 +30,14 @@ namespace _03.Decimal_to_hexadecimal
                     case 13: remainder = "D"; break;
                     case 14: remainder = "E"; break;
                     case 15: remainder = "F"; break;
-                    default: remainder = checkRemainder.ToString(); break; // if you enter any other number {1 , 2 .. 9}, you convert it in string
+                    // if you enter any other number {1 , 2 .. 9}, you convert it in string
+                    default: remainder = checkRemainder.ToString(); break; 
                 }
 
                 hexValue = remainder + hexValue;
-                dec /= 16;
+                decimalNumber /= 16;
             }
+
             return hexValue;
         }
     }

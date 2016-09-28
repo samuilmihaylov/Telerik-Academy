@@ -5,26 +5,27 @@ namespace _02.Get_largest_number
 {
     class GetLargestNumber
     {
-        static int getMax(int[] input, int maxValue)
+        static int GetMaximumValue(int[] input, int maxValue)
         {
             maxValue = input.Max();
+
             return maxValue;
         }
 
         static void Main(string[] args)
         {
             string[] values = Console.ReadLine().Split(' ');
-            int max = 0;
+            int maximumValue = 0;
 
-            int[] arr = new int[values.Length];
-            for (int i = 0; i < arr.Length; i++)
+            int[] array = new int[values.Length];
+            for (int i = 0; i < array.Length; i++)
             {
-                arr[i] = int.Parse(values[i]);
+                array[i] = int.Parse(values[i]);
             }
 
-            max = getMax(arr, max);
+            maximumValue = GetMaximumValue(array, maximumValue);
             
-            Console.WriteLine(max);
+            Console.WriteLine(maximumValue);
         }
     }
 }

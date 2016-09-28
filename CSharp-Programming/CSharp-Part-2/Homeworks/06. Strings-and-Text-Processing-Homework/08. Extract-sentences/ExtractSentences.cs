@@ -1,5 +1,4 @@
-﻿
-namespace _08.Extract_sentences
+﻿namespace _08.Extract_sentences
 {
     using System;
     using System.Linq;
@@ -9,11 +8,11 @@ namespace _08.Extract_sentences
         static void Main()
         {
             string wordSearch = Console.ReadLine().Trim();
-            string text = Console.ReadLine();
+            string inputText = Console.ReadLine();
 
-            string[] sentences = text.Split(new string[] { "." }, StringSplitOptions.RemoveEmptyEntries);
+            string[] sentences = inputText.Split(new string[] { "." }, StringSplitOptions.RemoveEmptyEntries);
 
-            char[] separators = GetNonLetterSymbols(text); // calling method
+            char[] separators = GetNonLetterSymbols(inputText); 
 
             foreach (string sentence in sentences)
             {
@@ -24,6 +23,7 @@ namespace _08.Extract_sentences
                     if (word.Trim() == wordSearch)
                     {
                         Console.Write(sentence.Trim() + ". ");
+
                         break;
                     }
                 }
@@ -33,8 +33,8 @@ namespace _08.Extract_sentences
         private static char[] GetNonLetterSymbols(string input)
         {
             char[] symbols = input
-                .Where(ch => !char.IsLetter(ch)) // needs System.Linq
-                .Distinct() // removes all duplicate elements in a collection; returns only the distinct elements
+                .Where(ch => !char.IsLetter(ch))
+                .Distinct()                      
                 .ToArray();
 
             return symbols;

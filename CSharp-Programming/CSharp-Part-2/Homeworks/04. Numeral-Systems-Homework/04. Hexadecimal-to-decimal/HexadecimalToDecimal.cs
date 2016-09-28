@@ -1,23 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Numerics;
-
-namespace _04.Hexadecimal_to_decimal
+﻿namespace _04.Hexadecimal_to_decimal
 {
+    using System;
+    using System.Numerics;
+
     class HexadecimalToDecimal
     {
         static void Main(string[] args)
         {
             string hexadecimalNumber = Console.ReadLine();
+
             Console.WriteLine(HexadecimalToDecimalNumber(ReverseArray(hexadecimalNumber)));
         }
 
         static char[] ReverseArray(string arrayToReverse)
         {
-            char[] reversedArray = arrayToReverse.ToCharArray(); // creating an array of chars because we want to reverse it 
+            char[] reversedArray = arrayToReverse.ToCharArray(); 
+
             Array.Reverse(reversedArray);
 
             return reversedArray;
@@ -42,6 +40,7 @@ namespace _04.Hexadecimal_to_decimal
                 }
                 numberInDecimal += valueInDecimal * (BigInteger)Math.Pow(16, i);
             }
+
             return numberInDecimal;
         }
     }

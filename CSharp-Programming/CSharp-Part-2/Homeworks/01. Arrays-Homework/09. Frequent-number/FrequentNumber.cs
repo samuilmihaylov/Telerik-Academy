@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _09.Frequent_number
+﻿namespace _09.Frequent_number
 {
+    using System;
+
     class FrequentNumber
     {
         static void Main(string[] args)
@@ -40,6 +36,7 @@ namespace _09.Frequent_number
                     }
                 }
             }
+
             Console.WriteLine("{0} ({1} times)",element, maxCount);
         }
     }

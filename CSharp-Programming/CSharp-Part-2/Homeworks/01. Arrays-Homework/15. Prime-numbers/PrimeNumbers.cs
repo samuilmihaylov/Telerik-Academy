@@ -6,13 +6,12 @@
     {
         static void Main(string[] args)
         {
-            int length = int.Parse(Console.ReadLine());
-            int[] arr = new int[length + 1];
+            int arraySize = int.Parse(Console.ReadLine());
+            int[] arr = new int[arraySize + 1];
             int maxPrime = 0;
 
-            for (int i = 2; i <= length; i++)
+            for (int i = 2; i <= arraySize; i++)
             {
-                // Adding elements to array
                 arr[i] = i; 
             }
             for (int i = 2; i < arr.Length; i++)
@@ -39,6 +38,7 @@
                     }
                 }
             }
+
             Console.WriteLine(maxPrime);
         }
     }

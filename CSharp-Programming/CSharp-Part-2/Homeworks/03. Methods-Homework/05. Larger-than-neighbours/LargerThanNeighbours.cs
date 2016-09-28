@@ -10,16 +10,19 @@ namespace _05.Larger_than_neighbours
     {
         static void Main(string[] args)
         {
-            int size = int.Parse(Console.ReadLine());
-            int[] arr = new int[size];
-            int count = 0;
+            int arraySize = int.Parse(Console.ReadLine());
             string[] values = Console.ReadLine().Split(' ');
+
+            int[] arr = new int[arraySize];
+            int count = 0;
 
             for (int i = 0; i < arr.Length; i++)
             {
                 arr[i] = int.Parse(values[i]);
             }
+
             count = LargerThanTheNeighbours(arr, count);
+
             Console.WriteLine(count);
         }
 

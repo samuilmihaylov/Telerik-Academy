@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _01.Allocate_arra
+﻿namespace _01.Allocate_arra
 {
+    using System;
+
     class AllocateArray
     {
         static void Main(string[] args)
@@ -15,9 +11,8 @@ namespace _01.Allocate_arra
 
             for (int i = 0; i < array.Length; i++)
             {
-                Console.WriteLine(i*5);
+                Console.WriteLine(i * 5);
             }
-
         }
     }
 }

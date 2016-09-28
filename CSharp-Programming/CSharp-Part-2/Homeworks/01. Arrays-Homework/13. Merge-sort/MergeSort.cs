@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _13.Merge_sort
+﻿namespace _13.Merge_sort
 {
+    using System;
+
     class MergeSort
     {
         public static int[] SplitArray(int[] arr)

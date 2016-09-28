@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _04.Triangle_surface_by_side_and_altitude
+﻿namespace _04.Triangle_surface_by_side_and_altitude
 {
+    using System;
+
     class Triangle
     {
-        public decimal side;
+        public decimal Side;
 
-        public decimal altitude;
+        public decimal Altitude;
     }
 
     class TriangleSurfaceBySideAndAltitude
@@ -19,16 +15,17 @@ namespace _04.Triangle_surface_by_side_and_altitude
         {
             Triangle myTriangle = new Triangle();
 
-            myTriangle.side = decimal.Parse(Console.ReadLine());
-            myTriangle.altitude = decimal.Parse(Console.ReadLine());
+            myTriangle.Side = decimal.Parse(Console.ReadLine());
+            myTriangle.Altitude = decimal.Parse(Console.ReadLine());
 
-            Console.WriteLine("{0:F2}",Surface(myTriangle.side, myTriangle.altitude));
-        } 
+            Console.WriteLine("{0:F2}", Surface(myTriangle.Side, myTriangle.Altitude));
+        }
 
-        static decimal Surface(decimal A, decimal H)
+        static decimal Surface(decimal side, decimal height)
         {
             decimal surface = 0;
-            surface = (A * H) / 2;
+            surface = (side * height) / 2;
+
             return surface;
         }
     }

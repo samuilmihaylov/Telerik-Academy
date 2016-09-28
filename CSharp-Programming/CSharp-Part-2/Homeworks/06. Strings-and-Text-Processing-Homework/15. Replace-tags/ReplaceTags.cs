@@ -1,10 +1,9 @@
-﻿using System;
-using System.Text;
-using System.Text.RegularExpressions;
-
-
-namespace _15.Replace_tags
+﻿namespace _15.Replace_tags
 {
+    using System;
+    using System.Text;
+    using System.Text.RegularExpressions;
+
     class ReplaceTags
     {
         static void Main(string[] args)
@@ -22,16 +21,19 @@ namespace _15.Replace_tags
                 int startIndex = 0;
                 startIndex = sentences[i].IndexOf("<a");
 
-                if (startIndex < 0) // not found
+                // Not found
+                if (startIndex < 0)
                 {
                     sb.Append(sentences[i]);
                 }
 
-                if (startIndex > 0) // is found
+                // Is found
+                if (startIndex > 0)
                 {
                     int replaceSentenceStartIndex = 0;
                     int sentenceEndIndex = 0;
                     string replaceSentence = string.Empty;
+
                     replaceSentenceStartIndex = sentences[i].IndexOf("<a href=");
                     sentenceEndIndex = sentences[i].IndexOf("</a>");
 
@@ -40,9 +42,9 @@ namespace _15.Replace_tags
                     {
                         sentenceSentenceLength += 1;
                     }
+
                     replaceSentence = sentences[i].Substring(replaceSentenceStartIndex, sentenceSentenceLength);
 
-                    //TO-DO: [TEXT]
                     int textStartIndex = 0;
                     string text = string.Empty;
                     textStartIndex = replaceSentence.IndexOf(">") + 1;
@@ -52,9 +54,9 @@ namespace _15.Replace_tags
                     {
                         textLength += 1;
                     }
+
                     text = replaceSentence.Substring(textStartIndex, textLength);
 
-                    //TO-DO: [URL]
                     int urlStartIndex = 0;
                     int urlEndIndex = 0;
                     string url = string.Empty;
@@ -72,8 +74,10 @@ namespace _15.Replace_tags
                     sb.Append(replaced + ". ");
                 }   
             }
+
             sb = sb.Replace("</a>", "");
             sb = sb.Remove(sb.Length - 2, 2);
+
             Console.WriteLine("<p>" + sb.ToString() + "</p>");
         }
     }

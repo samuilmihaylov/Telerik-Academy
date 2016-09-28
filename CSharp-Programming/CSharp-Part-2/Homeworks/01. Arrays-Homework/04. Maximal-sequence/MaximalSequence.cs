@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _04.Maximal_sequence
+﻿namespace _04.Maximal_sequence
 {
+    using System;
+
     class MaximalSequence
     {
         static void Main(string[] args)
@@ -18,8 +14,8 @@ namespace _04.Maximal_sequence
 
             for (int i = 0; i < length; i++)
             {
-                int el = int.Parse(Console.ReadLine());
-                array[i] = el;
+                int element = int.Parse(Console.ReadLine());
+                array[i] = element;
             }
 
             for (int j = 1; j < length; j++)
@@ -34,6 +30,7 @@ namespace _04.Maximal_sequence
                     currentSequence = 1;
                 }
             }
+
             Console.WriteLine(maxSequence);
         }
     }

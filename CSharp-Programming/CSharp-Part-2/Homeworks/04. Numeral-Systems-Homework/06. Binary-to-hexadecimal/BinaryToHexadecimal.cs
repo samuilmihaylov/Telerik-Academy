@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Numerics;
-
-namespace _06.Binary_to_hexadecimal
+﻿namespace _06.Binary_to_hexadecimal
 {
+    using System;
+    using System.Numerics;
+
     class BinaryToHexadecimal
     {
         static void Main(string[] args)
@@ -15,6 +11,7 @@ namespace _06.Binary_to_hexadecimal
 
             BigInteger numberInDecimal = 0;
             char[] charArray = binaryInput.ToCharArray();
+
             Array.Reverse(charArray);
 
             for (int i = 0; i < charArray.Length; i++)
@@ -43,6 +40,7 @@ namespace _06.Binary_to_hexadecimal
                     case 15: remainder = "F"; break;
                     default: remainder = checkRemainder.ToString(); break;
                 }
+
                 hexValue = remainder.ToString() + hexValue;
                 numberInDecimal /= 16;
             }

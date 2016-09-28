@@ -1,61 +1,68 @@
-﻿using System;
-using System.Linq;
-using System.Numerics;
-
-
-namespace _14.Integer_calculations
+﻿namespace _14.Integer_calculations
 {
+    using System;
+    using System.Linq;
+    using System.Numerics;
+
     class IntegerCalculations
     {
         static void Main(string[] args)
         {
-            string[] array = Console.ReadLine().Split(' ');
-            int[] arr = new int[array.Length];
-            arr = fillArray(arr, array);
+            string[] inputStringArray = Console.ReadLine().Split(' ');
 
-            int minimum = MinimumValue(arr);
-            int maximum = MaximumValue(arr);
-            int sum = SumOfArray(arr);
-            BigInteger product = ProductOfArray(arr);
-            float average = AverageOfAray(arr, sum, arr.Length);
+            int[] array = new int[inputStringArray.Length];
+            array = fillArray(array, inputStringArray);
+
+            int minimum = FindMinimumValue(array);
+            int maximum = FindMaximumValue(array);
+
+            int sum = SumOfArray(array);
+
+            BigInteger product = ProductOfArray(array);
+
+            float average = AverageValueOfArray(array, sum, array.Length);
 
             Console.Write(" {0}\n {1}\n {2:F2}\n {3}\n {4}\n", minimum, maximum, average, sum, product);
-
         }
-
 
         static BigInteger ProductOfArray(int[] array)
         {
-            BigInteger prod = 1;
+            BigInteger product = 1;
+
             foreach (int value in array)
             {
-                prod *= value;
+                product *= value;
             }
-            return prod;
+
+            return product;
         }
 
         static int SumOfArray(int[] array)
         {
             int sum = array.Sum();
+
             return sum;
         }
 
-        static int MinimumValue(int[] array)
+        static int FindMinimumValue(int[] array)
         {
-            int min = array.Min();
-            return min;
+            int minimumValue = array.Min();
+
+            return minimumValue;
         }
 
-        static int MaximumValue(int[] array)
+        static int FindMaximumValue(int[] array)
         {
-            int max = array.Max();
-            return max;
+            int maximumValue = array.Max();
+
+            return maximumValue;
         }
 
-        static float AverageOfAray(int[] array, int sum, int size)
+        static float AverageValueOfArray(int[] array, int sum, int length)
         {
-            float avg = sum / (float)size;
-            return avg;
+            float averageValue = sum / (float)length;
+
+            return averageValue;
         }
 
 
@@ -65,6 +72,7 @@ namespace _14.Integer_calculations
             {
                 arrayToFill[i] = int.Parse(array[i]);
             }
+
             return arrayToFill;
         }
     }

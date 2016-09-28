@@ -1,8 +1,8 @@
-﻿using System;
-using System.Numerics;
-
-namespace _01.Decimal_to_binary
+﻿namespace _01.Decimal_to_binary
 {
+    using System;
+    using System.Numerics;
+
     class DeciamlToBinary
     {
         static void Main(string[] args)
@@ -19,9 +19,9 @@ namespace _01.Decimal_to_binary
             BigInteger remainder = 0;
             string result = "";
 
-            while (number > 0) // 1 / 2 = 0, while number = 1
+            while (number > 0)
             {
-                remainder = number % 2; // 1 % 2 = 1, 1 left as remainder
+                remainder = number % 2;
                 number /= 2;
                 result = remainder.ToString() + result;
             }

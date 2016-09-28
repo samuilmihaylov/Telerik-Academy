@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _01.Fill_the_matrix
+﻿namespace _01.Fill_the_matrix
 {
+    using System;
+
     class FillTheMatrix
     {
         static void Main(string[] args)
         {
-            int length = int.Parse(Console.ReadLine());
-            int[,] arr = new int[length, length];
+            int matrixSize = int.Parse(Console.ReadLine());
+            int[,] arr = new int[matrixSize, matrixSize];
             char typeOfMatrix = (char)Console.Read();
             int val = 1;
             int currentRow = 0;
@@ -21,9 +17,9 @@ namespace _01.Fill_the_matrix
             // Case "A"
             if (Char.ToUpper(typeOfMatrix).Equals('A'))
             {
-                for (int col = 0; col < length; col++)
+                for (int col = 0; col < matrixSize; col++)
                 {
-                    for (int row = 0; row < length; row++)
+                    for (int row = 0; row < matrixSize; row++)
                     {
                         arr[row, col] = val;
                         val++;
@@ -34,11 +30,11 @@ namespace _01.Fill_the_matrix
             // Case "B"
             else if (Char.ToUpper(typeOfMatrix).Equals('B'))
             {
-                for (int col = 0; col < length; col++)
+                for (int col = 0; col < matrixSize; col++)
                 {
                     if (col % 2 == 0)
                     {
-                        for (int row = 0; row < length; row++)
+                        for (int row = 0; row < matrixSize; row++)
                         {
                             arr[row, col] = val;
                             val++;
@@ -46,7 +42,7 @@ namespace _01.Fill_the_matrix
                     }
                     else
                     {
-                        for (int row = length - 1; row >= 0; row--)
+                        for (int row = matrixSize - 1; row >= 0; row--)
                         {
                             arr[row, col] = val;
                             val++;
@@ -58,17 +54,17 @@ namespace _01.Fill_the_matrix
             // Case "C"
             else if (Char.ToUpper(typeOfMatrix).Equals('C'))
             {
-                for (int row = length - 1; row >= 0; row--)
+                for (int row = matrixSize - 1; row >= 0; row--)
                 {
-                    for (int col = 0; col < length - row; col++)
+                    for (int col = 0; col < matrixSize - row; col++)
                     {
                         arr[row + col, col] = val;
                         val++;
                     }
                 }
-                for (int col = 1; col < length; col++)
+                for (int col = 1; col < matrixSize; col++)
                 {
-                    for (int row = 0; row < length - col; row++)
+                    for (int row = 0; row < matrixSize - col; row++)
                     {
                         arr[row, col + row] = val++;
                     }
@@ -78,15 +74,15 @@ namespace _01.Fill_the_matrix
             // Case "D"
             else if (Char.ToUpper(typeOfMatrix).Equals('D'))
             {
-                for (int i = 1; i <= length * length; i++)
+                for (int i = 1; i <= matrixSize * matrixSize; i++)
                 {
-                    if (direction == "down" && (currentRow >= length || arr[currentRow, currentColumn] != 0))
+                    if (direction == "down" && (currentRow >= matrixSize || arr[currentRow, currentColumn] != 0))
                     {
                         currentRow--;
                         currentColumn++;
                         direction = "right";
                     }
-                    else if (direction == "right" && (currentColumn >= length || arr[currentRow, currentColumn] != 0))
+                    else if (direction == "right" && (currentColumn >= matrixSize || arr[currentRow, currentColumn] != 0))
                     {
                         currentColumn--;
                         currentRow--;

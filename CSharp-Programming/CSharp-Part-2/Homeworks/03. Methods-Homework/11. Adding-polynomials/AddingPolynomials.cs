@@ -1,29 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _11.Adding_polynomials
+﻿namespace _11.Adding_polynomials
 {
+    using System;
+
     class AddingPolynomials
     {
         static void Main(string[] args)
         {
-            int N = int.Parse(Console.ReadLine());
+            int arraySize = int.Parse(Console.ReadLine());
 
             string[] arrayA = Console.ReadLine().Split(' ');
             string[] arrayB = Console.ReadLine().Split(' ');
 
-            int[] arrA = new int[N];
-            int[] arrB = new int[N];
+            int[] arrA = new int[arraySize];
+            int[] arrB = new int[arraySize];
 
             arrA = fillArray(arrA, arrayA);
             arrB = fillArray(arrB, arrayB);
 
-            int[] sumArray = new int[N];
-
+            int[] sumArray = new int[arraySize];
             sumArray = SumOfThePolynomials(arrA, arrB, sumArray);
+
             Console.Write(string.Join(" ", sumArray));
         }
 
@@ -33,6 +29,7 @@ namespace _11.Adding_polynomials
             {
                 arrayToFill[i] = int.Parse(array[i]);
             }
+
             return arrayToFill;
         }
 
@@ -42,6 +39,7 @@ namespace _11.Adding_polynomials
             {
                 Sum[i] = A[i] + B[i];
             }
+
             return Sum;
         }
     }

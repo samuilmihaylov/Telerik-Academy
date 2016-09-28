@@ -1,16 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _06.Triangle_surface_by_two_sides_and_an_angle
+﻿namespace _06.Triangle_surface_by_two_sides_and_an_angle
 {
+    using System;
+
     class Triangle
     {
-        public double sideA;
-        public double sideB;
-        public double degrees;
+        public double SideA;
+
+        public double SideB;
+
+        public double Degrees;
     }
 
     class TriangleSurfaceByTwoSidesAndAnAngle
@@ -19,25 +17,25 @@ namespace _06.Triangle_surface_by_two_sides_and_an_angle
         {
             Triangle myTriangle = new Triangle();
 
-            myTriangle.sideA = double.Parse(Console.ReadLine());
-            myTriangle.sideB = double.Parse(Console.ReadLine());
-            myTriangle.degrees = double.Parse(Console.ReadLine());
+            myTriangle.SideA = double.Parse(Console.ReadLine());
+            myTriangle.SideB = double.Parse(Console.ReadLine());
+            myTriangle.Degrees = double.Parse(Console.ReadLine());
 
-            Console.WriteLine("{0:F2}", Surface(CalculateSin(myTriangle.degrees), myTriangle.sideA, myTriangle.sideB));
+            Console.WriteLine("{0:F2}", Surface(CalculateSinus(myTriangle.Degrees), myTriangle.SideA, myTriangle.SideB));
         }
 
-        static double CalculateSin(double deg)
+        static double CalculateSinus(double degrees)
         {
-            double angle = Math.PI * deg / 180.0;
+            double angle = Math.PI * degrees / 180.0;
             double sinAngle = Math.Sin(angle);
 
             return sinAngle;
         }
 
-        static double Surface(double angleC, double A, double B)
+        static double Surface(double angleC, double sideA, double sideB)
         {
             double surface = 0;
-            surface = (A * B * angleC) / 2.0;
+            surface = (sideA * sideB * angleC) / 2.0;
 
             return surface;
         }

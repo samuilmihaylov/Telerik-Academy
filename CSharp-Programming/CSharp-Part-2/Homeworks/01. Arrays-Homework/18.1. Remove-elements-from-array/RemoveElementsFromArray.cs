@@ -1,36 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _18.Remove_elements_from_array
+﻿namespace _18.Remove_elements_from_array
 {
+    using System;
+
     class RemoveElementsFromArray
     {
         static void Main(string[] args)
         {
-            int length = int.Parse(Console.ReadLine());
-            int[] arr = new int[length];
+            int arraySize = int.Parse(Console.ReadLine());
+            int[] arr = new int[arraySize];
             int minIndex = 0;
             int current = 0;
             int elToRemove = 0;
             int maxElToRemove = 0;
             int subSequenceCount = 0;
 
-            for (int i = 0; i < length; i++)
+            for (int i = 0; i < arraySize; i++)
             {
                 arr[i] = int.Parse(Console.ReadLine());
             }
 
             int min = arr[0];
 
-            for (int i = 0; i < length; i++)
+            for (int i = 0; i < arraySize; i++)
             {
-                if (arr[i] < min && i != length - 1)  // finding the minimum value in the arr[]
+                if (arr[i] < min && i != arraySize - 1)  
                 {
-                    min = arr[i]; // minimum value in array
-                    minIndex = i; // the index of minimum value              
+                    min = arr[i]; 
+                    minIndex = i;            
                 }
             }
 
@@ -39,11 +35,11 @@ namespace _18.Remove_elements_from_array
                 elToRemove++;
             }
 
-            for (int j = minIndex + 1; j < length; j++) // starting from the next index of the minimum value
+            for (int j = minIndex + 1; j < arraySize; j++) 
             {
-                current = arr[j]; // next value after the min
+                current = arr[j]; 
 
-                for (int i = j + 1; i < length; i++) // starting from the value after the current
+                for (int i = j + 1; i < arraySize; i++) 
                 {
                     int numToCompare = arr[i];
 
@@ -61,7 +57,6 @@ namespace _18.Remove_elements_from_array
                         elToRemove = 0;
                         subSequenceCount = 0;
                     }
-
                     else if (current < numToCompare)
                     {
                         subSequenceCount++;
@@ -69,6 +64,7 @@ namespace _18.Remove_elements_from_array
                     }
                 }
             }
+
             Console.WriteLine(maxElToRemove);
         }
     }

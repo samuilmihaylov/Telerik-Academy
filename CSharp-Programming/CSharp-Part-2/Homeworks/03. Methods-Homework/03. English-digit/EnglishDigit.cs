@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _03.English_digit
+﻿namespace _03.English_digit
 {
+    using System;
+
     class EnglishDigit
     {
         static void Main(string[] args)
@@ -19,10 +15,8 @@ namespace _03.English_digit
             Console.WriteLine(word);
         }
 
-
         static string digitToEnglishWord(int integer, string engWord)
         {
-
             int lastDigit = integer % 10;
             switch (lastDigit)
             {

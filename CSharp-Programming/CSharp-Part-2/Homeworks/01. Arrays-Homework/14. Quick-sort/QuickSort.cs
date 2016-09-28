@@ -1,26 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _14.Quick_sort
+﻿namespace _14.Quick_sort
 {
+    using System;
+
     public class QuickSort
     {
         public static void Main()
         {
-            int length = int.Parse(Console.ReadLine());
-            int[] arr = new int[length];
+            int arraySize = int.Parse(Console.ReadLine());
+            int[] arr = new int[arraySize];
 
-            for (int i = 0; i < length; i++)
+            for (int i = 0; i < arraySize; i++)
             {
-                arr[i] = int.Parse(Console.ReadLine()); // enter the elements in the array
+                arr[i] = int.Parse(Console.ReadLine()); 
             }
 
-            QuicSortAlgorithm(arr, 0, length - 1); // calling the algorithm
+            QuicSortAlgorithm(arr, 0, arraySize - 1); 
 
-            for (int i = 0; i < length; i++) // printing the sorted array
+            for (int i = 0; i < arraySize; i++) 
             {
                 Console.WriteLine(arr[i]);
             }
@@ -29,10 +25,10 @@ namespace _14.Quick_sort
         public static void QuicSortAlgorithm(int[] arr, int left, int right)
         {
 
-            int pivotIndex = (left + right) / 2; // setting the index of pivot element from the array
-            int leftIndex = left; // 0
-            int rightindex = right; // length - 1
-            int pivot = arr[pivotIndex]; // the pivot element
+            int pivotIndex = (left + right) / 2;
+            int leftIndex = left;
+            int rightindex = right;
+            int pivot = arr[pivotIndex]; 
 
             while (leftIndex <= rightindex)
             {

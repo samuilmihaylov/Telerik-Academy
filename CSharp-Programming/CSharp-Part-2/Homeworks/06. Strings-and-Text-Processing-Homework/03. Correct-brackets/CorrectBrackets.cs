@@ -1,30 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _03.Correct_brackets
+﻿namespace _03.Correct_brackets
 {
+    using System;
+
     class Program
     {
         static void Main(string[] args)
         {
-            string input = Console.ReadLine();
+            string inputString = Console.ReadLine();
             int countLeft = 0, countRight = 0;
 
-            for (int i = 0; i < input.Length; i++)
+            for (int i = 0; i < inputString.Length; i++)
             {
-                if (input[i] == '(')
+                if (inputString[i] == '(')
                 {
                     countLeft++;
                 }
 
-                if (input[i] == ')')
+                if (inputString[i] == ')')
                 {
                     countRight++;
                 }
             }
+
             if (countLeft == countRight)
             {
                 Console.WriteLine("Correct");

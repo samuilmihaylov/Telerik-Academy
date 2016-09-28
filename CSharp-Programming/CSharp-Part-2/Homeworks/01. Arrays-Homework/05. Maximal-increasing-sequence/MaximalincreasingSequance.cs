@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _05.Maximal_increasing_sequence
+﻿namespace _05.Maximal_increasing_sequence
 {
+    using System;
+
     class MaximalincreasingSequance
     {
         static void Main(string[] args)
@@ -34,6 +30,7 @@ namespace _05.Maximal_increasing_sequence
                     currentSequence = 1;
                 }
             }
+
             Console.WriteLine(maxSequence);
         }
     }

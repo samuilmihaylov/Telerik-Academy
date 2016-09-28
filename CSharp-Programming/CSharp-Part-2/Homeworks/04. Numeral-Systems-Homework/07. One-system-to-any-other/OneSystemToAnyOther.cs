@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _07.One_system_to_any_other
+﻿namespace _07.One_system_to_any_other
 {
+    using System;
+    using System.Collections.Generic;
+
     class OneSystemToAnyOther
     {
         static Dictionary<char, int> decDigits = new Dictionary<char, int>()
@@ -51,15 +48,16 @@ namespace _07.One_system_to_any_other
                 int digit = Convert.ToInt32(decValue % Convert.ToUInt64(dBase));
                 dValue = baseDigits[digit] + dValue;
                 decValue /= Convert.ToUInt64(dBase);
-            } while (decValue != 0);
+            }
+            while (decValue != 0);
 
             return dValue;
         }
 
         static void Main()
         {
-            int s = int.Parse(Console.ReadLine()); // base s
-            string N = Console.ReadLine();         // input
+            int s = int.Parse(Console.ReadLine());
+            string N = Console.ReadLine();
             int d = int.Parse(Console.ReadLine());
 
             Console.WriteLine((NToD(NToDec(N, s), d)));

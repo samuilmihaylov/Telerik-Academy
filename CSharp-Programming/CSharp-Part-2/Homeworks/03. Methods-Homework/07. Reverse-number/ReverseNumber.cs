@@ -1,19 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _07.Reverse_number
+﻿namespace _07.Reverse_number
 {
+    using System;
+    using System.Linq;
+
     class ReverseNumber
     {
         static void Main(string[] args)
         {
-            decimal number = decimal.Parse(Console.ReadLine());
-
+            decimal inputNumber = decimal.Parse(Console.ReadLine());
             string reversedDecimal = "";
-            reversedDecimal = ReverseDecimalNumber(number, reversedDecimal);
+
+            reversedDecimal = ReverseDecimalNumber(inputNumber, reversedDecimal);
+
             Console.WriteLine(reversedDecimal);
         }
 

@@ -1,22 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _03.Sequence_in_matrix
+﻿namespace _03.Sequence_in_matrix
 {
+    using System;
+    using System.Linq;
+
     class SequenceInMatrix
     {
         static void Main(string[] args)
         {
-            string[] sizes = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-            int rows = int.Parse(sizes[0]);
-            int columns = int.Parse(sizes[1]);
+            string[] matrixSizes = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            int rows = int.Parse(matrixSizes[0]);
+            int columns = int.Parse(matrixSizes[1]);
 
             int[,] matrix = new int[rows, columns];
 
-            // Entering the elements in matrix
             for (int row = 0; row < rows; row++)
             {
                 string[] inputRows = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
@@ -27,9 +23,6 @@ namespace _03.Sequence_in_matrix
                 }
             }
 
-            //Finding the length of the longest sequence of equal equal strings in the matrix
-
-            // checking the columns
             int colsSubsequneceLength = 1;
             int colsCountMax = 0;
 
@@ -49,7 +42,7 @@ namespace _03.Sequence_in_matrix
                 colsSubsequneceLength = 1;
             }
 
-            // checking the rows
+            // Checking the rows
             int rowsSubsequenceLength = 1;
             int rowsCountMax = 0;
 
@@ -71,7 +64,7 @@ namespace _03.Sequence_in_matrix
                 rowsSubsequenceLength = 1;
             }
 
-            // checking the right diagonal 
+            // Checking the right diagonal 
             int rightDiagonalLength = 1;
             int rightDiagonalMax = 0;
 
@@ -95,7 +88,7 @@ namespace _03.Sequence_in_matrix
                 }
             }
 
-            //checking the left diagonal
+            // Checking the left diagonal
             int leftDiagonalLength = 1;
             int leftDiagonalMax = 0;
 

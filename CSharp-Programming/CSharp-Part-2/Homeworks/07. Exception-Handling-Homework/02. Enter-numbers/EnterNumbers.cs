@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _02.Enter_numbers
+﻿namespace _02.Enter_numbers
 {
+    using System;
+    using System.Text;
+
     class EnterNumbers
     {
         static int EnterNumber(int start, int end)
@@ -34,8 +31,6 @@ namespace _02.Enter_numbers
             int[] numbers = new int[10];
             int currentNum = 1;
 
-            StringBuilder sb = new StringBuilder();
-
             for (int i = 0; i < numbers.Length; i++)
             {
                 numbers[i] = EnterNumber(0, 100);
@@ -45,9 +40,9 @@ namespace _02.Enter_numbers
                     if (currentNum < numbers[i])
                     {
                         currentNum = numbers[i];
+
                         continue;
                     }
-
                     else if (currentNum > numbers[i] || currentNum == numbers[i])
                     {
                         throw new Exception();
@@ -56,16 +51,19 @@ namespace _02.Enter_numbers
                 catch (Exception)
                 {
                     Console.WriteLine("Exception");
+
                     return;
                 }
             }
 
+            StringBuilder stringBuilder = new StringBuilder();
+
             foreach (var item in numbers)
             {
-                sb.Append(item + " < ");
+                stringBuilder.Append(item + " < ");
             }
 
-            Console.WriteLine("1 < " + sb.ToString() + "100");
+            Console.WriteLine("1 < " + stringBuilder.ToString() + "100");
         }
     }
 }

@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _08.Binary_short
+﻿namespace _08.Binary_short
 {
+    using System;
+
     class BinaryShort
     {
         static void Main(string[] args)

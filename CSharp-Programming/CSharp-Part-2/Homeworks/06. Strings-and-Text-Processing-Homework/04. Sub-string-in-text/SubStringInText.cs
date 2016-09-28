@@ -1,37 +1,35 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-
-namespace _04.Sub_string_in_text
+﻿namespace _04.Sub_string_in_text
 {
+    using System;
+
     class SubStringInText
     {
         static void Main(string[] args)
         {
-            string pattern = Console.ReadLine();
-            string text = Console.ReadLine();
+            string inputPattern = Console.ReadLine();
+            string inputText = Console.ReadLine();
 
-            pattern = pattern.ToLower();
-            text = text.ToLower();
+            inputPattern = inputPattern.ToLower();
+            inputText = inputText.ToLower();
 
             int counter = 0;
             int index = 0;
 
             while (true)
             {
-                // searching for the pattern in text starting from index, return index or -1 if no found
-                int found = text.IndexOf(pattern, index);
+                // Searching for the pattern in text starting from index, return index or -1 if no found
+                int found = inputText.IndexOf(inputPattern, index);
 
-                if (found == -1) // if nothing is found, exit from loop when all the string is readed
+                // If nothing is found, exit from loop when all the string is readed
+                if (found == -1) 
                 {
                     break;
                 }
+
                 counter++;
                 index = found + 1; 
             }
+
             Console.WriteLine(counter);
         }
     }

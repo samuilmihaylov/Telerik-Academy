@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _06.Maximal_K_sum
+﻿namespace _06.Maximal_K_sum
 {
+    using System;
+
     class MaximalKSum
     {
         static void Main(string[] args)
@@ -31,7 +27,6 @@ namespace _06.Maximal_K_sum
             }
 
             Console.WriteLine(sum);
-
         }
     }
 }

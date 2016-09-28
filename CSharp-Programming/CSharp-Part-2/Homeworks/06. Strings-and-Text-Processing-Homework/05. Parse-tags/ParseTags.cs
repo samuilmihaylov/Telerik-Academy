@@ -1,49 +1,29 @@
-﻿
-namespace _05.Parse_tags
+﻿namespace _05.Parse_tags
 {
     using System;
     using System.Text;
-    using System.Collections.Generic;
 
     class ParseTags
     {
         static void Main()
         {
-            //string text = Console.ReadLine();
-
-            //List<int> lst = new List<int>();
-
-            //int nextStart = text.IndexOf("<upcase>");
-            //int nextEnd = text.IndexOf("</upcase>");
-            //while (nextStart != -1)
-            //{
-            //    lst.Add(nextStart);
-            //    nextStart = text.IndexOf("<upcase>", nextStart + 1);
-            //    lst.Add(nextEnd);
-            //    nextEnd = text.IndexOf("</upcase>", nextEnd + 1);
-            //}
-
-            //for (int i = 0; i < lst.Count; i += 2)
-            //{
-            //    int start = lst[i];
-            //    int end = lst[i + 1];
-            //    var changedString = text.Substring(start + 8, end - start - 8).ToUpper();
-            //    Console.WriteLine(changedString);
-            //}
-
             string text = Console.ReadLine();
-            StringBuilder sb = new StringBuilder();
+            StringBuilder stringBuilder = new StringBuilder();
 
-            int toUpper = -1;   //checks if we have to enter UPPERCASE MODE
+            // Checks if we have to enter UPPERCASE MODE
+            int toUpper = -1;   
 
             for (int i = 0; i < text.Length; i++)
             {
                 if (text[i] == '<')
                 {
                     i++;
-                    toUpper = toUpper * (-1); // an opening tag => start UPPER
 
-                    while (text[i] != '>')    // disregard all of the tag's content
+                    // An opening tag => start UPPER
+                    toUpper = toUpper * (-1); 
+
+                    // Disregard all of the tag's content
+                    while (text[i] != '>')    
                     {
                         i++;
                     }
@@ -52,15 +32,16 @@ namespace _05.Parse_tags
                 {
                     if (toUpper == 1)
                     {
-                        sb.Append(text[i].ToString().ToUpper());
+                        stringBuilder.Append(text[i].ToString().ToUpper());
                     }
                     else
                     {
-                        sb.Append(text[i]);
+                        stringBuilder.Append(text[i]);
                     }
                 }
             }
-            Console.WriteLine(sb.ToString());
+
+            Console.WriteLine(stringBuilder.ToString());
         }
     }
 }

@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _07.Selection_sort
+﻿namespace _07.Selection_sort
 {
+    using System;
+
     class SelectionSort
     {
         static void Main(string[] args)
@@ -17,7 +13,6 @@ namespace _07.Selection_sort
             {
                 array[i] = int.Parse(Console.ReadLine());
             }
-
 
             for (int i = 0; i < size - 1; i++)
             {
@@ -31,6 +26,7 @@ namespace _07.Selection_sort
                         iMin = j;
                     }
                 }
+
                 if (iMin != i)
                 {
                     var temp = array[i];
@@ -39,6 +35,7 @@ namespace _07.Selection_sort
                 }
 
                 Console.WriteLine(array[i]);
+
                 if (i == size - 2)
                 {
                     Console.WriteLine(array[i + 1]);

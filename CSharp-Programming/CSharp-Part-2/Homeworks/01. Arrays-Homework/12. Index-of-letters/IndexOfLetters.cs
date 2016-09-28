@@ -24,6 +24,7 @@ namespace _12.Index_of_letters
                         index = Array.IndexOf(alpha, word[i]);
                     }
                 }
+
                 Console.WriteLine(index);
             }         
         }

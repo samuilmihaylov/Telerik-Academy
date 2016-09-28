@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _01.Say_Hello
+﻿namespace _01.Say_Hello
 {
+    using System;
+
     class SayHello
     {
         static void Main(string[] args)

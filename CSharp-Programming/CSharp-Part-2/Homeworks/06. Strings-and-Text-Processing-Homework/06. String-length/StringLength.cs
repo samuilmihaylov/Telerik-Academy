@@ -1,25 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _06.String_length
+﻿namespace _06.String_length
 {
+    using System;
+    using System.Text;
+
     class StringLength
     {
         static void Main(string[] args)
         {
-            string input = Console.ReadLine();
-            StringBuilder sb = new StringBuilder();
-            input = input.Replace(@"\", string.Empty);
-            sb.Append(input);
+            string inputString = Console.ReadLine();
+            StringBuilder stringBuilder = new StringBuilder();
 
-            for (int i = input.Length; i <20; i++)
+            inputString = inputString.Replace(@"\", string.Empty);
+            stringBuilder.Append(inputString);
+
+            for (int i = inputString.Length; i < 20; i++)
             {
-                sb.Append("*");
+                stringBuilder.Append("*");
             }
-            Console.WriteLine(sb.ToString());
+            Console.WriteLine(stringBuilder.ToString());
         }
     }
 }
